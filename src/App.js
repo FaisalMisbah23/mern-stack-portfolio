@@ -54,7 +54,7 @@ rtl={false}
 pauseOnFocusLoss
 draggable
 pauseOnHover
-theme="dark"
+theme="light"
 />
       {data.length > 0 && <Home content={data[0] || {}} />}
       {data.length > 1 && <About content={data[1] || {}} />}

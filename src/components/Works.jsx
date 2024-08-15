@@ -1,6 +1,20 @@
-import React from 'react';
+import React , {useEffect,useState} from 'react';
 
 const Works = ({ content }) => {
+  const [screen, setScreen] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+        if (window.innerWidth < 350) {
+            setScreen(false);
+        }
+        else {
+            setScreen(true);
+        }
+    };
+    handleResize()
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+},[]);
   return (
     <div name="work" className="w-full h-full sm:h-screen sm:pb-0 pb-12 text-white bg-[#262626]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -28,9 +42,9 @@ const Works = ({ content }) => {
                   <span className="text-center text-lg font-bold text-white tracking-wider">
                     {work.work_title}
                   </span>
-                  <p className="text-center mx-4">{work.work_description}</p>
-                  <div className="text-sm flex flex-wrap items-center mt-3 gap-x-2 gap-y-4 mx-4">
-                    {work.stack.split(',').map((s, idx) => (
+                  <p className="text-center mx-2">{work.work_description}</p>
+                  <div className="text-sm flex flex-wrap items-center mt-3 gap-x-2 gap-y-4 mx-2">
+                    {screen && work.stack.split(',').map((s, idx) => (
                       <p
                         key={idx}s
                         className="text-center p-2 hover:bg-[#9ACD32] bg-[#9D9D9D] hover:scale-110 duration-500 rounded-full"

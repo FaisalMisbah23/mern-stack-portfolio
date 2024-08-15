@@ -2,9 +2,9 @@ import React from 'react';
 
 const Works = ({ content }) => {
   return (
-    <div name="work" className="w-full md:h-full text-white bg-[#262626]">
+    <div name="work" className="w-full h-full sm:h-screen sm:pb-0 pb-12 text-white bg-[#262626]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className="pb-8 w-full flex justify-center items-center flex-col">
+        <div className="pb-4 w-full flex justify-center items-center flex-col">
           <p className="text-5xl font-bold inline">Works</p>
           <p className="py-6 text-2xl">{content?.fields.work_header}</p>
         </div>
@@ -29,7 +29,7 @@ const Works = ({ content }) => {
                     {work.work_title}
                   </span>
                   <p className="text-center mx-4">{work.work_description}</p>
-                  <div className="text-sm flex flex-wrap items-center mt-4 gap-x-2 gap-y-4 mx-4">
+                  <div className="text-sm flex flex-wrap items-center mt-3 gap-x-2 gap-y-4 mx-4">
                     {work.stack.split(',').map((s, idx) => (
                       <p
                         key={idx}s
@@ -39,7 +39,7 @@ const Works = ({ content }) => {
                       </p>
                     ))}
                   </div>
-                  <div className="pt-4 text-center flex items-center gap-4">
+                  <div className="pt-3 text-center flex items-center gap-4">
                     <a href={work.demo}>
                       <button className="rounded-md px-4 py-2 my-2 bg-[#9D9D9D] hover:bg-[#9ACD32] text-white font-bold text-lg">
                         Demo

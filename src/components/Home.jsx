@@ -31,7 +31,7 @@ const Home = ({ content }) => {
             </Link>
           </div>
         </div>
-        <div>
+        <div className='sm:block hidden'>
           <img
             src={me}
             alt="my profile"

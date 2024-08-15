@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div name='contact' className='w-full h-full bg-[#262626] flex justify-center items-center p-4'>
+    <div name='contact' className='w-full h-full sm:h-screen bg-[#262626] flex justify-center items-center p-4'>
         <div className='flex flex-col max-w-[600px] w-full'>
             <div className='pb-8 flex flex-col justify-center w-full h-full items-center'>
                 <p className='text-5xl font-bold inline text-white pb-4'>Contact</p>
@@ -23,7 +23,7 @@ const Contact = () => {
 <textarea 
   className='bg-[#333333] outline-none border-[1px] border-white focus:border-[1px] focus:border-[#9D9D9D] rounded-md p-2 text-white' 
   name="message" 
-  rows="6" 
+  rows="4" 
   placeholder='Message'
 ></textarea>
 

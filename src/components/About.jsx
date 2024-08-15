@@ -5,10 +5,10 @@ const About = ({content}) => {
     <div
       name="about"
       id="about"
-      className="w-full h-screen bg-[#262626] text-white"
+      className="w-full h-full sm:h-screen sm:pb-0 pb-12 bg-[#262626] text-white"
     >
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className=" py-16 rounded-md bg-[#9D9D9D] hover:bg-[#9ACD32] flex flex-col justify-center items-center w-4/6">
+        <div className="sm:py-16 py-8 rounded-md bg-[#9D9D9D] hover:bg-[#9ACD32] flex flex-col justify-center items-center w-4/6">
           <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8 mb-4">
             <div className="sm:text-right pb-8 pl-4">
               <p className="text-5xl font-bold inline">
